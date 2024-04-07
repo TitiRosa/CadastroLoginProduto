@@ -92,5 +92,6 @@ public void TC007_deveLogarComEmailESenhaCorretos(){
         loginPage.executarAcaoDeLogar("admin@admin.com", "admin@123");
         assertEquals(loginPage.obterTituloPagina(), "Controle de Produtos");
     }
+   //
 
 }
