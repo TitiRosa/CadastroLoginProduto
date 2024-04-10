@@ -66,6 +66,7 @@ public class LoginTest extends BaseTest{
 //        assertEquals(mensagem, "E-mail ou senha inválidos");
 
     }
+<<<<<<< HEAD
     @Test
     public void TC004_naoDeveLogarComEmailESenhaIncorretos(){
 
@@ -87,9 +88,16 @@ public class LoginTest extends BaseTest{
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "E-mail ou senha inválidos");
     }
+=======
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37
 @Test
 public void TC007_deveLogarComEmailESenhaCorretos(){
         loginPage.executarAcaoDeLogar("admin@admin.com", "admin@123");
         assertEquals(loginPage.obterTituloPagina(), "Controle de Produtos");
     }
+<<<<<<< HEAD
   }
+=======
+
+}
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37

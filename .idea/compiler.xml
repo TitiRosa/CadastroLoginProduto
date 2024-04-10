@@ -9,5 +9,8 @@
         <module name="automatizado" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="automatizado" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,12 +2,21 @@ package automatizado.test;
 
 import automatizado.builder.ProdutoBuilder;
 import automatizado.page.ControleDeProdutoPO;
+<<<<<<< HEAD
+=======
+import automatizado.page.GooglePO;
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37
 import automatizado.page.LoginPO;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+<<<<<<< HEAD
+=======
+import java.util.concurrent.TimeUnit;
+
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37
 import static org.junit.Assert.assertEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -45,7 +54,11 @@ public class ControleDeProdutoTest extends BaseTest {
 //        assertEquals("Todos os campos são obrigatórios para o cadastro!", mensagem);
 //    }
     @Test
+<<<<<<< HEAD
     public void TC002_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos() {
+=======
+    public void TC003_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos() {
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37
         String mensagem = "Todos os campos são obrigatórios para o cadastro!";
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
@@ -109,6 +122,7 @@ public class ControleDeProdutoTest extends BaseTest {
                 .builder();
         controlleProdutoPage.buttonSalvar.click();
     }
+<<<<<<< HEAD
     @Test
     public void TC005_DeveFecharOModalDeCadastroDeProdutoAoClicarEmSair() {
         controlleProdutoPage.buttonAdicionar.click();
@@ -116,4 +130,6 @@ public class ControleDeProdutoTest extends BaseTest {
 
         controlleProdutoPage.buttonSair.click();
     }
+=======
+>>>>>>> e06b6399f8bffe56d1286af9641d34b4e81b8a37
 }
