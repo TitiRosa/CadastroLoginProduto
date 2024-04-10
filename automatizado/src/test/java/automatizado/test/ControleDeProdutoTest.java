@@ -2,14 +2,11 @@ package automatizado.test;
 
 import automatizado.builder.ProdutoBuilder;
 import automatizado.page.ControleDeProdutoPO;
-import automatizado.page.GooglePO;
 import automatizado.page.LoginPO;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 
@@ -48,7 +45,7 @@ public class ControleDeProdutoTest extends BaseTest {
 //        assertEquals("Todos os campos são obrigatórios para o cadastro!", mensagem);
 //    }
     @Test
-    public void TC003_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos() {
+    public void TC002_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos() {
         String mensagem = "Todos os campos são obrigatórios para o cadastro!";
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
@@ -111,5 +108,12 @@ public class ControleDeProdutoTest extends BaseTest {
                 .adicionarData("21/03/2021")
                 .builder();
         controlleProdutoPage.buttonSalvar.click();
+    }
+    @Test
+    public void TC005_DeveFecharOModalDeCadastroDeProdutoAoClicarEmSair() {
+        controlleProdutoPage.buttonAdicionar.click();
+        controlleProdutoPage.buttonAdicionar.click();
+
+        controlleProdutoPage.buttonSair.click();
     }
 }
