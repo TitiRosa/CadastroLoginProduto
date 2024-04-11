@@ -16,6 +16,7 @@ public class ControleDeProdutoPO extends BasePO{
 
     @FindBy(id = "btn-adicionar")
     public WebElement buttonAdicionar;
+
     @FindBy(css = "a.nav-link")
     public WebElement linkVoltar;
 
@@ -44,6 +45,9 @@ public class ControleDeProdutoPO extends BasePO{
 
     @FindBy(id = "mensagem")
     public WebElement spanMensagem;
+
+    @FindBy(css = "div.modal-body>div.alert>button")
+    public WebElement buttonFecharMensagem;
     public ControleDeProdutoPO(WebDriver driver) {
         super(driver);
     }
