@@ -4,21 +4,22 @@
   <groupId>br.com.exemplo</groupId>
   <artifactId>automatizado</artifactId>
   <packaging>jar</packaging>
-    <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
-    </properties>
+  <properties>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
+  </properties>
+
     <version>1.0-SNAPSHOT</version>
   <name>automatizado</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13.2</version>
-    <scope>test</scope>
-</dependency>
-   
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-chrome-driver</artifactId>
