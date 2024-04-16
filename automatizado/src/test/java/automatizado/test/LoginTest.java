@@ -4,8 +4,8 @@ import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) //metodo para executar os testes pela ordem
 public class LoginTest extends BaseTest{
     private static LoginPO loginPage;
@@ -95,8 +95,6 @@ public void TC007_deveLogarComEmailESenhaCorretos(){
         assertEquals(loginPage.obterTituloPagina(), "Controle de Produtos");
     }
 
-  }
-
-
 }
+
 

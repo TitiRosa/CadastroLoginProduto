@@ -2,13 +2,11 @@ package automatizado.test;
 
 import automatizado.builder.ProdutoBuilder;
 import automatizado.page.ControleDeProdutoPO;
-import automatizado.page.GooglePO;
 import automatizado.page.LoginPO;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ControleDeProdutoTest extends BaseTest {
