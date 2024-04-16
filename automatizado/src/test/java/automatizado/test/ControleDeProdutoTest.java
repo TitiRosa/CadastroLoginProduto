@@ -25,12 +25,19 @@ public class ControleDeProdutoTest extends BaseTest {
     }
 
     @Test
+    public void TC001_deveClicarEValidarControleProduto(){
+
+        String titulo = "Controle de produtos";
+        controlleProdutoPage.tituloControleProduto.click();
+        assertEquals(titulo, controlleProdutoPage.tituloControleProduto.getText());
+    }
+
+    @Test
     public void TC001_deveAbrirModalParaCadastroAoClicarNoBotaoCriar() {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
         String titulo = controlleProdutoPage.tituloModal.getText();
         assertEquals("Produto", titulo);
-        controlleProdutoPage.buttonSair.click();
         controlleProdutoPage.buttonSair.click();
     }
 
@@ -117,10 +124,18 @@ public class ControleDeProdutoTest extends BaseTest {
         controlleProdutoPage.buttonSair.click();
     }
     @Test
-    public void TC005_DeveFecharMensagemDeAlerta() {
+    public void TC005_DeveFecharOModalDeCadastroDeProdutoAoClicarNoIconeFechar() {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
 
+        controlleProdutoPage.buttonFecharModalProduto.click();
+    }
+    @Test
+    public void TC006_DeveFecharMensagemDeAlerta() {
+        controlleProdutoPage.buttonAdicionar.click();
+        controlleProdutoPage.buttonAdicionar.click();
+
+        controlleProdutoPage.buttonSalvar.click();
         controlleProdutoPage.buttonFecharMensagem.click();
     }
 }
