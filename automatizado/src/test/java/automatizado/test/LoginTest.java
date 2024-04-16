@@ -6,7 +6,9 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) //metodo para executar os testes pela ordem
+
 public class LoginTest extends BaseTest{
     private static LoginPO loginPage;
 
@@ -98,5 +100,4 @@ public void TC007_deveLogarComEmailESenhaCorretos(){
   }
 
 
-}
 
