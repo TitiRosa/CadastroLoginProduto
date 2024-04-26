@@ -48,6 +48,8 @@ public class ControleDeProdutoPO extends BasePO{
 
     @FindBy(css = "div.modal-body>div.alert>button")
     public WebElement buttonFecharMensagem;
+    @FindBy(css = "table.table.table-hover")
+    public WebElement tableProduto;
     public ControleDeProdutoPO(WebDriver driver) {
         super(driver);
     }
