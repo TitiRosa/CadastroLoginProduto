@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ControleDeProdutoTest extends BaseTest {
 
@@ -27,6 +28,7 @@ public class ControleDeProdutoTest extends BaseTest {
     }
 
     @Test
+
     public void TC001_deveAbrirModalParaCadastroAoClicarNoBotaoCriar() {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
