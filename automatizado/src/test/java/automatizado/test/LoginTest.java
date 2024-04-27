@@ -35,7 +35,6 @@ public class LoginTest extends BaseTest{
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
 
-
 //   loginPage.escrever(loginPage.inputEmail,"");
 //   loginPage.escrever(loginPage.inputSenha,"");
 //   loginPage.buttonEntrar.click();
@@ -56,7 +55,6 @@ public class LoginTest extends BaseTest{
 //        executarAcaoDeLogar("Teste", "");
 //        String mensagem = loginPage.obterMensagem();
 //        assertEquals(mensagem, "E-mail ou senha inválidos");
-
     }
     @Test
     public void TC003_naoDeveLogarComEmailVazioESenhaIncorreta(){
@@ -85,7 +83,6 @@ public class LoginTest extends BaseTest{
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "E-mail ou senha inválidos");
     }
-
    @Test
 public void TC007_deveLogarComEmailESenhaCorretos(){
         loginPage.executarAcaoDeLogar("admin@admin.com", "admin@123");
