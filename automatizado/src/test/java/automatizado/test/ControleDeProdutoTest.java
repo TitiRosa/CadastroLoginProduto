@@ -45,7 +45,6 @@ public class ControleDeProdutoTest extends BaseTest {
 //        assertEquals("Todos os campos são obrigatórios para o cadastro!", mensagem);
 //    }
     @Test
-
     public void TC002_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos() {
 
           String mensagem = "Todos os campos são obrigatórios para o cadastro!";
@@ -92,7 +91,6 @@ public class ControleDeProdutoTest extends BaseTest {
 
         controlleProdutoPage.buttonSair.click();
         controlleProdutoPage.buttonSair.click();
-
         //produtoBuilder.builder(); //Adiciona as informações na tela
     }
 
@@ -111,6 +109,7 @@ public class ControleDeProdutoTest extends BaseTest {
                 .builder();
         controlleProdutoPage.buttonSalvar.click();
     }
+
     @Test
     public void TC004_DeveFecharOModalDeCadastroDeProdutoAoClicarEmSair() {
         controlleProdutoPage.buttonAdicionar.click();
@@ -118,11 +117,11 @@ public class ControleDeProdutoTest extends BaseTest {
 
         controlleProdutoPage.buttonSair.click();
     }
+
     @Test
     public void TC005_DeveFecharMensagemDeAlerta() {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
-
         controlleProdutoPage.buttonFecharMensagem.click();
     }
 }

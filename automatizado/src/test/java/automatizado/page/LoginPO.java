@@ -5,9 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPO extends BasePO{
-    /**
+    /*
      * Construtor base para criação da fabrica de elementos (PageFactory)
-     *
      * @param driver Driver da página atual
      */
     public LoginPO(WebDriver driver) {
@@ -30,11 +29,15 @@ public class LoginPO extends BasePO{
     // @FindBy(css = "'form.form-login>div.alert>span'")
    // public WebElement spanMensagem;     apenas para demonstrar que mensagem pode ser identificada por css
 
+
+    /**
+     * Metodo que oobtem a mensagem disparada na tela
+     * @return Texto da mensagem
+     */
        public String obterMensagem() {
 
        return spanMensagem.getText();
    }
-
    /*
    Metodo que tenta executar a ação de logar no sistema
    email e senha para tentativa de login
@@ -44,7 +47,4 @@ public class LoginPO extends BasePO{
         escrever(inputSenha,senha);
         buttonEntrar.click();
     }
-
-
-    
 }

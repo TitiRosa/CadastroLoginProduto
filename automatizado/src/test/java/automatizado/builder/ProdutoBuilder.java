@@ -3,6 +3,9 @@ package automatizado.builder;
 import automatizado.page.ControleDeProdutoPO;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Classe que sabe construir ou adicionar um produto na tela
+ */
 public class ProdutoBuilder {
 
     public String codigo = "0001";
@@ -12,11 +15,22 @@ public class ProdutoBuilder {
     public String data = "03/11/2021";
 
     private ControleDeProdutoPO controleDeProdutoPO;
+
+    /**
+     * Construtor do ProdutoBuilder que recebe a página de controle de produtos
+     * @param controleDeProdutoPO
+     */
     public ProdutoBuilder(ControleDeProdutoPO controleDeProdutoPO){
         this.controleDeProdutoPO = controleDeProdutoPO;
     }
     /*
     Se nenhum valor for passado, os valores informados serão padrão
+     */
+
+    /**
+     * Metodo que sabe adicionar um codigo ao builder
+     * @param codigo Codigo que será adicionado
+     * @return Retorna a propria classe produtoBuilder
      */
 
     public ProdutoBuilder adicionarCodigo(String codigo){
@@ -35,10 +49,20 @@ public class ProdutoBuilder {
         this.valor = valor;
         return this;
     }
+
+    /**
+     * Metodo que sabe adicionar uma data ao builder
+     * @param data Data que será adicionada
+     * @return Retorna a própria classe ProdutoBuilders
+     */
     public ProdutoBuilder adicionarData(String data){
         this.data = data;
         return this;
     }
+
+    /**
+     * Metodo que constroi o produto, ou seja, adiciona o produto pela tela de cadastro e produto
+     */
 
     public void builder(){
         controleDeProdutoPO.escrever(controleDeProdutoPO.inputCodigo, codigo);

@@ -24,9 +24,20 @@ public abstract class BasePO {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    /**
+     * Metodo que retorna o título da págin atual
+     * @return
+     */
     public String obterTituloPagina(){
         return driver.getTitle();
     }
+
+    /**
+     * Metodo que sabe escrever em qualquer WebElement do tipo imput e da um TAB no final
+     * @param input input a qual será escrito
+     * @param texto Texto que será escrito no input
+     */
     public void escrever(WebElement input, String texto){
         input.clear();
         input.sendKeys(texto + Keys.TAB);

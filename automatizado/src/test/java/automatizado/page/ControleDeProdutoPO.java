@@ -7,10 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ControleDeProdutoPO extends BasePO{
-    /**
-     *
+    /*
      * Construtor base para criação da fabrica de elementos (PageFactory)
-     *
      * @param driver Driver da página atual
      */
 
@@ -61,10 +59,8 @@ public class ControleDeProdutoPO extends BasePO{
         escrever(inputValor, valor.toString());
         escrever(inputData, data);
         buttonSalvar.click();
-
     }
     public  void cadastrarProduto(ProdutoBuilder produtoBuilder){
-
         inputCodigo.clear();
         escrever(inputCodigo, produtoBuilder.codigo);
         escrever(inputNome,produtoBuilder.nome);
@@ -72,6 +68,5 @@ public class ControleDeProdutoPO extends BasePO{
         escrever(inputValor, produtoBuilder.valor.toString());
         escrever(inputData, produtoBuilder.data);
         buttonSalvar.click();
-
     }
 }
