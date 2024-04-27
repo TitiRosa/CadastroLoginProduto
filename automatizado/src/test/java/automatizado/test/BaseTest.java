@@ -41,9 +41,7 @@ public abstract class BaseTest {
      * Metodo para finalizar o driver do navegador depois de qualquer classe de teste
      */
    @AfterClass
-public static void finalizar() {
-
+   public static void finalizar() {
      driver.quit();
    }
-    
 }
