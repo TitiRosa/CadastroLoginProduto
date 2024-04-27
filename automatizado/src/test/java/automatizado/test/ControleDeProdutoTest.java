@@ -157,7 +157,6 @@ public class ControleDeProdutoTest extends BaseTest {
                 .adicionarData("21/03/2021")
                 .builder();
         controlleProdutoPage.buttonSalvar.click();
-
         controlleProdutoPage.tableProduto.getText();
     }
 }

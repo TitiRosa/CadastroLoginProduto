@@ -8,8 +8,10 @@ import org.junit.runners.MethodSorters;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING) //metodo para executar os testes pela ordem
+/*
+Metodo para executar os testes pela ordem
+ */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class LoginTest extends BaseTest{
     private static LoginPO loginPage;
@@ -23,7 +25,6 @@ public class LoginTest extends BaseTest{
     public static void prepararTestes(){
 
         loginPage = new LoginPO(driver);
-
     }
     @Test
     public void TC001_naoDeveLogarComEmailESenhaVazio(){
@@ -46,11 +47,9 @@ public class LoginTest extends BaseTest{
 //   loginPage.buttonEntrar.click();
 //   String mensagem = loginPage.obterMensagem();
 //   assertEquals(mensagem, "E-mail ou senha inválidos");
-
     }
     @Test
     public void TC002_naoDeveLogarComEmailInvalidoESenhaVazia(){
-
         loginPage.executarAcaoDeLogar("Teste", "");
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
@@ -61,33 +60,27 @@ public class LoginTest extends BaseTest{
     }
     @Test
     public void TC003_naoDeveLogarComEmailVazioESenhaIncorreta(){
-
         loginPage.executarAcaoDeLogar("", "Teste");
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
 //        executarAcaoDeLogar("", "Teste");
 //        String mensagem = loginPage.obterMensagem();
 //        assertEquals(mensagem, "E-mail ou senha inválidos");
-
     }
-
     @Test
     public void TC004_naoDeveLogarComEmailESenhaIncorretos(){
-
         loginPage.executarAcaoDeLogar("teste", "teste");
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "E-mail ou senha inválidos");
     }
     @Test
     public void TC005_naoDeveLogarComSenhaIncorreta(){
-
         loginPage.executarAcaoDeLogar("admin@admin.com", "teste");
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "E-mail ou senha inválidos");
     }
     @Test
     public void TC006_naoDeveLogarComEmailInvalido(){
-
         loginPage.executarAcaoDeLogar("Aadmin@admin.com", "admin@123");
         String mensagem = loginPage.obterMensagem();
         assertEquals(mensagem, "E-mail ou senha inválidos");
@@ -98,7 +91,6 @@ public void TC007_deveLogarComEmailESenhaCorretos(){
         loginPage.executarAcaoDeLogar("admin@admin.com", "admin@123");
         assertEquals(loginPage.obterTituloPagina(), "Controle de Produtos");
     }
-
   }
 
 
