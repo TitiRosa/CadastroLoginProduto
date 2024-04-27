@@ -6,7 +6,11 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) //metodo para executar os testes pela ordem
+
 public class LoginTest extends BaseTest{
     private static LoginPO loginPage;
 
@@ -89,7 +93,7 @@ public class LoginTest extends BaseTest{
         assertEquals(mensagem, "E-mail ou senha inválidos");
     }
 
-@Test
+   @Test
 public void TC007_deveLogarComEmailESenhaCorretos(){
         loginPage.executarAcaoDeLogar("admin@admin.com", "admin@123");
         assertEquals(loginPage.obterTituloPagina(), "Controle de Produtos");
@@ -98,5 +102,4 @@ public void TC007_deveLogarComEmailESenhaCorretos(){
   }
 
 
-}
 

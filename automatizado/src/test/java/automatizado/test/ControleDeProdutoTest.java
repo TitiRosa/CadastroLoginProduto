@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ControleDeProdutoTest extends BaseTest {
 
@@ -27,6 +28,7 @@ public class ControleDeProdutoTest extends BaseTest {
     }
 
     @Test
+
     public void TC001_deveAbrirModalParaCadastroAoClicarNoBotaoCriar() {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
@@ -123,5 +125,41 @@ public class ControleDeProdutoTest extends BaseTest {
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonAdicionar.click();
         controlleProdutoPage.buttonFecharMensagem.click();
+    }
+    @Test
+    public void TC006_DeveTrazerTabelaDeProdutoscadastrados() {
+        controlleProdutoPage.buttonAdicionar.click();
+        controlleProdutoPage.buttonAdicionar.click();
+
+
+        ProdutoBuilder produtoBuilder = new ProdutoBuilder(controlleProdutoPage);
+        produtoBuilder
+                .adicionarCodigo("0005")
+                .adicionarNome("Cimento")
+                .adicionarQuantidade(20)
+                .adicionarValor(50.00)
+                .adicionarData("21/03/2021")
+                .builder();
+        controlleProdutoPage.buttonSalvar.click();
+
+        produtoBuilder
+                .adicionarCodigo("0006")
+                .adicionarNome("Martelo")
+                .adicionarQuantidade(15)
+                .adicionarValor(30.00)
+                .adicionarData("21/03/2021")
+                .builder();
+        controlleProdutoPage.buttonSalvar.click();
+
+        produtoBuilder
+                .adicionarCodigo("0007")
+                .adicionarNome("Tijolo")
+                .adicionarQuantidade(3000)
+                .adicionarValor(350.00)
+                .adicionarData("21/03/2021")
+                .builder();
+        controlleProdutoPage.buttonSalvar.click();
+
+        controlleProdutoPage.tableProduto.getText();
     }
 }
