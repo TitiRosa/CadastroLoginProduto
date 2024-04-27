@@ -30,7 +30,7 @@ public class LoginPO extends BasePO{
    // public WebElement spanMensagem;     apenas para demonstrar que mensagem pode ser identificada por css
 
 
-    /**
+    /*
      * Metodo que oobtem a mensagem disparada na tela
      * @return Texto da mensagem
      */

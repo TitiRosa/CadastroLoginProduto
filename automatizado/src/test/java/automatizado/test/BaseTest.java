@@ -19,12 +19,12 @@ public abstract class BaseTest {
      * Caminho base da URL do sistema a ser testado
      */
     private static final String URL_BASE =  "file:///C:/Users/letic/Downloads/controle-de-produtos/sistema/login.html";
-    /**
+    /*
      * Caminho relativo do driver ao projeto referente ao path
      */
     private static final String CAMINHO_DRIVER = "C:/Users/letic/Desktop/AutomacaoLogin/TesteLogin/automatizado/src/test/java/automatizado/resource/chromedriver.exe";
 
-    /**
+    /*
      * Metodo para iniciar o driver do navegador, antes de qualquer classe de teste
      */
     
@@ -34,9 +34,7 @@ public abstract class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(URL_BASE);
-        
     }
-
     /**
      * Metodo para finalizar o driver do navegador depois de qualquer classe de teste
      */
