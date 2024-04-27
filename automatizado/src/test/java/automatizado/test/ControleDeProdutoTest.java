@@ -35,7 +35,6 @@ public class ControleDeProdutoTest extends BaseTest {
         controlleProdutoPage.buttonSair.click();
         controlleProdutoPage.buttonSair.click();
     }
-
     //    @Test
 //    public void TC002_naoDeveSerPossivelCadastrarUmProdutoSemPreencherTodosOsCampos(){
 //        controlleProdutoPage.buttonAdicionar.click();
@@ -117,7 +116,6 @@ public class ControleDeProdutoTest extends BaseTest {
 
         controlleProdutoPage.buttonSair.click();
     }
-
     @Test
     public void TC005_DeveFecharMensagemDeAlerta() {
         controlleProdutoPage.buttonAdicionar.click();
