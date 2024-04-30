@@ -158,5 +158,6 @@ public class ControleDeProdutoTest extends BaseTest {
                 .builder();
         controlleProdutoPage.buttonSalvar.click();
         controlleProdutoPage.tableProduto.getText();
+        controlleProdutoPage.primeiroProdutoDaTabela.getText("Cimento")
     }
 }
