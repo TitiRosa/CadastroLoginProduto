@@ -44,8 +44,13 @@ public class ControleDeProdutoPO extends BasePO{
     @FindBy(id = "mensagem")
     public WebElement spanMensagem;
 
+<<<<<<< HEAD
     //@FindBy(css = "div.modal-body>div.alert>button")
     @FindBy(css = "#cadastro-produto > div > div > div.modal-body > div.alert.alert-danger.text-center.alert-dismissible > button")
+=======
+   // @FindBy(css = "div.modal-body>div.alert>button")
+   @FindBy(css = "#cadastro-produto>div>div>div.modal-body>div.alert.alert-danger.text-center.alert-dismissible>button")
+>>>>>>> 088a9f40e7cc03abf0cc76348f0c8581ced2ef2e
     public WebElement buttonFecharMensagem;
 
     @FindBy(css = "table.table.table-hover")
